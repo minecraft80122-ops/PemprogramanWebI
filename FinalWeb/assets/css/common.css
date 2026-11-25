@@ -1,0 +1,194 @@
+html, body {
+    overflow-x: hidden;   /*cegah halaman bisa digeser ke samping*/
+}
+body {
+    color: #5c5c5c;
+    font-family: "Kantumruy Pro", sans-serif;
+    margin: 0px;
+    padding-top: 84px;
+}
+h1, h2, h3, h4, h5, .headingFont {
+    font-family: "Lunasima", sans-serif;
+}
+
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    font-family: "Kantumruy Pro", sans-serif;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 15px;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+    animation: headerMasuk 0.5s ease;
+}
+header.is-hidden {
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+}
+@keyframes headerMasuk {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.topHoverZone {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    z-index: 999;
+    background: transparent;
+}
+.headerPhills {
+    background-color: #333333;
+    border-radius: 20px;
+    padding: 10px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    color: #bdbdbd;
+}
+.headerPhills a {
+    display: flex;
+    color: #bdbdbd;
+    text-transform: uppercase;
+    text-decoration: none;
+    align-items: center;
+    padding: 4px;
+    margin: 2px;
+    border-radius: 8px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+.headerPhills a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+.dropdown {
+    display: flex;
+}
+
+/* button */
+.btnDetail {
+    color: #7a7a7a;
+    border: 1px solid #cfcfcf;
+    background-color: transparent;
+    padding: 8px 12px;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+.btnDetail:hover {
+    color: #ffffff;
+    background-color: #333333;
+    border-color: #333333;
+    transform: translateY(-3px);
+}
+.btnPilih {
+    color: #7a7a7a;
+    border: 1px solid #cfcfcf;
+    border-radius: 0px;
+    background-color: transparent;
+    padding: 8px 16px;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+.btnPilih:hover {
+    transform: translateY(-2px);
+    border-color: #333333;
+    color: #333333;
+}
+.btnPilih.active {
+    color: #ffffff;
+    background-color: #333333;
+    border-color: #333333;
+}
+.btnHolder {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+.pageKatalog .btn.active {
+    background-color: #3a3a3a;
+    color: #fff;
+    border-color: #3a3a3a;
+}
+.buyerTypeBtn {
+    color: #7a7a7a;
+    border: 1px solid #cfcfcf;
+    background: transparent;
+    padding: 8px 16px;
+}
+.buyerTypeBtn.active {
+    background: #333;
+    color: #fff;
+    border-color: #333;
+}
+.btnSubmit {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+}
+.btnSubmit:hover {
+    background: #1a1a1a;
+    color: #fff;
+}
+.tripTypeBtn {
+    color: #7a7a7a;
+    border: 1px solid #cfcfcf;
+    background: transparent;
+    padding: 8px 16px;
+}
+.tripTypeBtn.active {
+    background: #333;
+    color: #fff;
+}
+.btnNext {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+}
+.btnNext:hover {
+    background: #1a1a1a;
+    color: #fff;
+}
+.btnBackStep {
+    color: #7a7a7a;
+    border: 1px solid #cfcfcf;
+    background: transparent;
+    padding: 8px 16px;
+}
+.btnBackStep:hover {
+    border-color: #333;
+    color: #333;
+}
+
+/* form control common */
+.form-control {
+    border-radius: 0px;
+    border-color: #cfcfcf;
+    padding: 10px 12px;
+}
+.form-control:focus {
+    border-color: #5c5c5c;
+    box-shadow: none;
+}
+
+/* footer-ish */
+footer {
+    background: #2d3748;
+    color: #a0aec0;
+    padding: 1.5rem 0;
+}

@@ -1,0 +1,349 @@
+.searchSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 20px 16px;
+}
+
+.searchBox {
+    display: flex;
+    flex-direction: row;          /* force horizontal */
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 560px;             /* jangan full screen */
+}
+
+.searchBox .form-control {
+    flex: 1 1 auto;
+    min-width: 0;                 /* allow shrink */
+    width: auto;                  /* override bootstrap 100% */
+    background-color: #ffffff;
+    height: 42px;
+}
+
+.searchBox .btn,
+.searchBox .btnDetail {
+    flex: 0 0 auto;               /* jangan stretch */
+    white-space: nowrap;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* catalog content */
+.cardDesc {
+    padding: 8px 4px;
+}
+.cardDesc h3 {
+    font-family: "Lunasima", sans-serif;
+}
+.aircraftImg {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* portfolio / detail related */
+.posterWrap {
+    overflow: hidden;
+}
+.posterWrap .poster {
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+.posterWrap:hover .poster {
+    transform: scale(1.03);
+}
+.specBox {
+    background: #f7f7f7;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+/* compare page */
+.compareSection {
+    padding: 48px 40px 72px;
+    min-height: 520px;
+}
+.spawnPanel {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+.spawnPanel h4 {
+    color: #6b6b6b;
+    font-weight: 400;
+    margin-bottom: 14px;
+}
+
+@media (max-width: 576px) {
+    .searchBox {
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+    .searchBox .form-control {
+        flex: 1 1 100%;
+    }
+    .searchBox .btn {
+        flex: 1 1 auto;
+    }
+}
+
+
+/*portfolio (halaman detail pesawat)*/
+#kontenPesawat {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+#kontenPesawat.is-loading {
+    opacity: 0;
+    transform: translateY(12px);
+}
+.sectionHeading {
+    font-family: "Lunasima", sans-serif;
+}
+.detailWrapper {
+    margin: 40px 48px 60px;
+}
+.specRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 0.95rem;
+}
+.specLabel {
+    color: #8c8c8c;
+}
+.posterWrap .poster {
+    aspect-ratio: 16 / 8;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+@media (max-width: 768px) {
+    .detailWrapper {
+        margin: 32px 20px 48px;
+    }
+}
+
+/*style halaman lain yang sebelumnya hanya ada di style.css lama*/
+.topSection {
+    color: #5c5c5c;
+}
+.topSection h1 {
+    font-family: "Lunasima", sans-serif;
+}
+.personHead {
+    width: 22%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: #d4d4d4;
+    margin-bottom: 6%;
+}
+.personTorso {
+    width: 44%;
+    height: 44%;
+    border-radius: 8px;
+    background-color: #d4d4d4;
+    position: relative;
+}
+.personLegs {
+    display: flex;
+    gap: 8%;
+    width: 38%;
+    height: 34%;
+    margin-top: 4%;
+}
+.personLeg {
+    flex: 1;
+    height: 100%;
+    border-radius: 8px;
+    background-color: #d4d4d4;
+}
+.purchaseWrapper {
+    margin: 32px 48px 64px;
+}
+.pagePurchase .backLink {
+    color: #7a7a7a;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.pagePurchase .backLink:hover {
+    color: #333333;
+}
+.aircraftThumb {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.stepNum {
+    color: #b5b5b5;
+    font-size: 1rem;
+    min-width: 28px;
+}
+.inquiryCard {
+    border: 1px solid #d9d9d9;
+    border-radius: 0px;
+    padding: 36px;
+    background-color: #ffffff;
+}
+.summaryCard {
+    border: 1px solid #d9d9d9;
+    border-radius: 0px;
+    padding: 28px;
+    background-color: #fafafa;
+    margin-bottom: 28px;
+}
+.aircraftThumb, .pageLoan .sideThumb {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+.bookingWrapper {
+    margin: 36px 48px 64px;
+}
+.stepTab {
+    border: 1px solid #d9d9d9;
+    padding: 14px 18px;
+    background-color: #ffffff;
+    color: #a3a3a3;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.stepTab.active {
+    background-color: #3a3a3a;
+    border-color: #3a3a3a;
+    color: #ffffff;
+}
+.stepTabNum {
+    font-size: 1.05rem;
+}
+.stepTabSub {
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+    display: block;
+}
+.bookingCard {
+    border: 1px solid #d9d9d9;
+    padding: 32px;
+    background-color: #ffffff;
+}
+.sideCard {
+    border: 1px solid #d9d9d9;
+    background-color: #ffffff;
+}
+.sideThumb {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.routeBox {
+    background-color: #f5f5f5;
+    padding: 24px;
+}
+.backLink {
+    color: #5c5c5c;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+.backLink:hover {
+    color: #222222;
+}
+.paxBox {
+    border: 1px solid #e0e0e0;
+    background-color: #fafafa;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.summaryBox {
+    border: 1px solid #e0e0e0;
+    background-color: #fafafa;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.emptyAircraft {
+    background-color: #f5f5f5;
+    padding: 48px 24px;
+    text-align: center;
+}
+.aircraftSelect {
+    border-radius: 0px;
+    border-color: #cfcfcf;
+    padding: 10px 12px;
+}
+.aircraftSelect:focus {
+    border-color: #5c5c5c;
+    box-shadow: none;
+}
+
+/*compare size: panggung + siluet*/
+.spawnStage {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    gap: 32px;
+    min-height: 440px;
+    padding: 24px;
+    overflow-x: auto;
+    border-bottom: 2px solid #cfcfcf;   /* garis tanah */
+}
+.spawnItem {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.sizeTag {
+    background-color: #ffffff;
+    border: 1px solid #cfcfcf;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+    line-height: 1.3;
+    color: #7a7a7a;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.sizeTag:hover {
+    border-color: #333333;
+    color: #333333;
+}
+.personShape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.planeShape {
+    position: relative;
+}
+.planeBody {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: #d4d4d4;
+    border-radius: 999px;
+}
+.planeTail {
+    position: absolute;
+    background-color: #d4d4d4;
+    border-radius: 6px 6px 0 0;
+    transform-origin: bottom;
+    transform: skewX(-24deg);
+}
