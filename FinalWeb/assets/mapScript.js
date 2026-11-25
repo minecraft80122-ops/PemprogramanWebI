@@ -31,14 +31,14 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    // [x, y] per kota, dalam piksel gambar Map.webp (1080 x 625)
+    // [x, y] per kota, dalam piksel gambar awalnya Map.webp, final menjadi TheMap.png (sengaja lokasi kota di buat berbedaa dengan di galam game aslinya)
     var coords = {
         mondstadt: [575, 95],
-        liyue:     [690, 170],
-        inazuma:   [925, 470],
-        sumeru:    [520, 340],
-        fontaine:  [360, 355],
-        natlan:    [265, 410],
+        liyue: [690, 170],
+        inazuma: [925, 470],
+        sumeru: [520, 340],
+        fontaine: [360, 355],
+        natlan: [265, 410],
         "nod-krai": [300, 125],
         snezhnaya: [835, 200]
     };
