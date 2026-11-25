@@ -112,7 +112,7 @@ include 'includes/data_pesawat.php';
             </div>
         </section>
 
-        <!-- section map -->
+        <!-- section map (map di dapat dari mapnya sebuah game, tetapi lokasi di map untuk website sengaja di buat berbeda dari game)-->
         <section class="map">
             <img src="pages/TheMap.png" alt="map" class="poster">
             <svg class="mapRoute" viewBox="0 0 1080 625">
