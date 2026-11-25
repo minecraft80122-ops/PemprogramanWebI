@@ -114,7 +114,7 @@ include 'includes/data_pesawat.php';
 
         <!-- section map -->
         <section class="map">
-            <img src="pages/TheMap.pngs" alt="map" class="poster">
+            <img src="pages/TheMap.png" alt="map" class="poster">
             <svg class="mapRoute" viewBox="0 0 1080 625">
                 <g id="routeGroup" class="d-none">
                     <line id="routeLine" class="routeLine" x1="0" y1="0" x2="0" y2="0"></line>
