@@ -84,15 +84,12 @@
     margin: 6px;
 }
 
-/* ===== MAP ===== */
-/* FIX: grey area under map removed.
-   Previously background: lightgray showed as big grey strip
-   when image aspect didn't fill the section. */
+/*MAP*/
 .map {
     font-family: "Kantumruy Pro", sans-serif;
-    background: transparent;          /* was lightgray */
+    background: transparent;          /* warna awal: lightgrey */
     position: relative;
-    line-height: 0;                   /* remove gap under img */
+    line-height: 0;                   /* untuk menghilangkan bug (section berwarna light grey di bawah peta) */
     overflow: hidden;
 }
 .map .poster {
